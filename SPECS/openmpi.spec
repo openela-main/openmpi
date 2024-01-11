@@ -30,12 +30,12 @@
 
 Name:           openmpi%{?_cc_name_suffix}
 Version:        4.1.1
-Release:        3%{?dist}
+Release:        5%{?dist}
 Summary:        Open Message Passing Interface
 License:        BSD and MIT and Romio
 URL:            http://www.open-mpi.org/
 
-Epoch:          1
+Epoch:          2
 
 # We can't use %%{name} here because of _cc_name_suffix
 Source0:        https://www.open-mpi.org/software/ompi/v4.1/downloads/openmpi-%{version}.tar.bz2
@@ -359,6 +359,15 @@ make check
 
 
 %changelog
+* Fri Jul 21 2023 Kamal Heib <kheib@redhat.com> - 2:4.1.1-5
+- Increase Epoch tag
+- Resolves: rhbz#2221806, rhbz#2159630
+
+* Thu Jul 20 2023 Kamal Heib <kheib@redhat.com> - 1:4.1.1-4
+- Bump version
+- Revert v4.1.5
+- Resolves: rhbz#2221806, rhbz#2159630
+
 * Wed Feb 16 2022 Honggang Li <honli@redhat.com> - 4.1.1-3
 - Revert upstream v4.1.2
 - Add Epoch tag
